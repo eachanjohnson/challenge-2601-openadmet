@@ -1,0 +1,51 @@
+{
+    "features": [
+        [
+            ["clogp"]
+        ],
+        [
+            ["clogp", "transformer://models/llm/lchemme-1:clean_smiles"]
+        ],
+        [
+            ["clogp"], 
+            ["transformer://models/llm/lchemme-1:clean_smiles"]
+        ]
+    ],
+    "context": [
+        null,
+        [
+            "endpoint:hash"
+        ]
+    ],
+    "class_name": [
+        "bilinear-fp"
+    ],
+    "use_3d": [
+        false,
+        true
+    ],
+    "use_2d": [
+        false,
+        true
+    ],
+    "use_fp": [
+        false,
+        true
+    ],
+    "n_units": [
+        8,
+        64,
+        128
+    ],
+    "n_hidden": [
+        1,
+        4,
+        8
+    ],
+    "learning_rate": [
+        1e-05
+    ],
+    "residual_depth": [
+        2
+    ]
+}

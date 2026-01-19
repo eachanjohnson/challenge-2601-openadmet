@@ -1,0 +1,19 @@
+{
+    "core": {
+        "train": "hf://datasets/openadmet/openadmet-expansionrx-challenge-train-data/expansion_data_train.csv",
+        "test": "hf://datasets/openadmet/openadmet-expansionrx-challenge-test-data-blinded/expansion_data_test_blinded.csv"
+    },
+    "extra": {
+        "train": [
+            {
+                "location": "hf://datasets/scbirlab/fang-2023-biogen-adme/biogen-adme.csv.gz",
+                "column_map": {
+                    "id": ["Molecule Name", null],
+                    "smiles": ["SMILES", null],
+                    "log_solubility": ["KSol", "exp"],
+                    "log_hlm": ["HLM CLint", "exp"]
+                }
+            }
+        ]
+    }
+}

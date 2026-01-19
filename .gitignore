@@ -1,0 +1,8 @@
+/venv/
+cache/
+/.locks/
+/csv/
+/*.lock
+/models/hyperopt/*/cache/
+/models/hyperopt/*/configs/
+*.log
