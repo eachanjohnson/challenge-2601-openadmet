@@ -1,0 +1,71 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "csv",
+  "dataset_size": 5148196,
+  "description": "",
+  "download_checksums": {
+    "/nemo/lab/johnsone/home/users/johnsoe/challenges/2601-openadmet/data/train/train/data.csv": {
+      "num_bytes": 5545778,
+      "checksum": null
+    }
+  },
+  "download_size": 5545778,
+  "features": {
+    "clean_smiles": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "clogp": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "endpoint": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "endpoint_value": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "duvidnn/v0.0.1/inputs:0000": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "duvidnn/v0.0.1/inputs:context": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "duvidnn/v0.0.1/labels": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 10693974,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5148196,
+      "num_examples": 19847,
+      "dataset_name": "csv"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

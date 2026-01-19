@@ -1,0 +1,5 @@
+huggingface_hub[cli]
+tokenizers
+transformers
+schemist>=0.0.6
+-e file:///nemo/lab/johnsone/home/users/johnsoe/github/duvidnn[chem,transformers]

@@ -1,0 +1,2 @@
+config_i,context,dropout,ensemble_size,features,learning_rate,merge_method,n_hidden,n_units,residual_depth,data,cache,labels,structure_column,epochs,batch_size,val_data,model_class,n_parameters,test,training,validation
+249,['endpoint:hash'],0.0,3,"[['clogp', 'transformer://models/llm/lchemme-1:clean_smiles']]",1e-05,product,1,128,2,data/train/train/data.csv,.,['endpoint_value'],SMILES,1000,16,data/train/validation/data.csv,bilinear-fp,6134073,0.8644540519509629,0.9234767462388344,0.7738975788063216

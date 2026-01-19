@@ -1,0 +1,82 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "csv",
+  "dataset_size": 5148196,
+  "description": "",
+  "download_checksums": {
+    "/nemo/lab/johnsone/home/users/johnsoe/challenges/2601-openadmet/data/train/train/data.csv": {
+      "num_bytes": 5545778,
+      "checksum": null
+    }
+  },
+  "download_size": 5545778,
+  "features": {
+    "clean_smiles": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "clogp": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "endpoint": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "endpoint_value": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "duvidnn/0.0.1/feat:clean_smiles:morgan-fingerprint=33fd6e97": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "duvidnn/0.0.1/feat:clean_smiles:descriptors-2d=0a381a71": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "duvidnn/0.0.1/feat:clogp:identity=ea5952db": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "duvidnn/0.0.1/feat:clean_smiles:hf-bart=67131fb2": {
+      "feature": {
+        "dtype": "float32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "duvidnn/0.0.1/feat:endpoint:hash=3159aac2": {
+      "feature": {
+        "dtype": "float32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 10693974,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5148196,
+      "num_examples": 19847,
+      "dataset_name": "csv"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
