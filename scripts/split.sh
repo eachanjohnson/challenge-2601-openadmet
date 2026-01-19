@@ -42,38 +42,38 @@ source "$VENV_NAME"/bin/activate
 logger "Using $(python --version) at $(which python)"
 logger "Using $(schemist --version) at $(which schemist)"
 
-# logger "Splitting chemical data from $INPUT"
+logger "Splitting chemical data from $INPUT"
 
-# temp_output="$(dirname $INPUT)/temp"
-# mkdir -p "$temp_output"
-# # replace windows \r with \n
-# tr $'\r' $'\n' < "$INPUT" \
-# | schemist convert \
-#     -f csv \
-#     --column SMILES \
-#     --to id inchikey smiles scaffold mwt clogp tpsa \
-#     --options prefix=SCB- \
-# | schemist split \
-#     -f csv \
-#     --column SMILES \
-#     --type scaffold \
-#     --train 0.7 \
-#     --test 0.15 \
-#     --seed 42 \
-# > "$temp_output/temp.csv"
+temp_output="$(dirname $INPUT)/temp"
+mkdir -p "$temp_output"
+# replace windows \r with \n
+tr $'\r' $'\n' < "$INPUT" \
+| schemist convert \
+    -f csv \
+    --column SMILES \
+    --to id inchikey smiles scaffold mwt clogp tpsa \
+    --options prefix=SCB- \
+| schemist split \
+    -f csv \
+    --column SMILES \
+    --type scaffold \
+    --train 0.7 \
+    --test 0.15 \
+    --seed 42 \
+> "$temp_output/temp.csv"
 
-# for split in "train" "test" "validation"
-# do
-#     this_output="$(dirname $INPUT)/$split"
-#     mkdir -p "$this_output"
-#     logger "Processing $split..."
-#     pandas '.query("is_'"$split"'")' \
-#     < "$temp_output/temp.csv" \
-#     > "$this_output"/data.csv
-#     # gzip --best -f "$this_output"
-# done
+for split in "train" "test" "validation"
+do
+    this_output="$(dirname $INPUT)/$split"
+    mkdir -p "$this_output"
+    logger "Processing $split..."
+    pandas '.query("is_'"$split"'")' \
+    < "$temp_output/temp.csv" \
+    > "$this_output"/data.csv
+    # gzip --best -f "$this_output"
+done
 
-# rm -r $temp_output
+rm -r $temp_output
 
 schemist convert "$TEST_INPUT"\
     -f csv \
