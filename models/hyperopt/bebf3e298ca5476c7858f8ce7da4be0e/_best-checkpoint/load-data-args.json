@@ -1,0 +1,17 @@
+{
+    "cache": ".",
+    "context": [
+        "endpoint:hash"
+    ],
+    "data": "data/train/train/data.csv",
+    "features": [
+        [
+            "clogp",
+            "transformer://models/llm/lchemme-1:clean_smiles"
+        ]
+    ],
+    "labels": [
+        "endpoint_value"
+    ],
+    "structure_column": "SMILES"
+}

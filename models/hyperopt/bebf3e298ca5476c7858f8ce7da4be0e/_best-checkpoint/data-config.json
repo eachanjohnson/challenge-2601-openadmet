@@ -1,0 +1,69 @@
+{
+    "_default_cache": "models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/cache/duvidnn/0.0.1",
+    "_default_preprocessing_args": {
+        "input_representation": "smiles",
+        "structure_column": "SMILES"
+    },
+    "_in_key": "duvidnn/v0.0.1/inputs",
+    "_input_cols": [
+        [
+            "clean_smiles",
+            "clogp"
+        ],
+        [
+            "endpoint"
+        ]
+    ],
+    "_input_featurizers": [
+        [
+            {
+                "input_column": "clean_smiles",
+                "kwargs": {},
+                "name": "morgan-fingerprint"
+            },
+            {
+                "input_column": "clean_smiles",
+                "kwargs": {},
+                "name": "descriptors-2d"
+            },
+            {
+                "input_column": "clogp",
+                "kwargs": {},
+                "name": "identity"
+            },
+            {
+                "input_column": "clean_smiles",
+                "kwargs": {
+                    "aggregator": [
+                        "mean"
+                    ],
+                    "ref": "models/llm/lchemme-1"
+                },
+                "name": "hf-bart"
+            }
+        ],
+        [
+            {
+                "input_column": "endpoint",
+                "kwargs": {},
+                "name": "hash"
+            }
+        ]
+    ],
+    "_label_cols": [
+        "endpoint_value"
+    ],
+    "_out_key": "duvidnn/v0.0.1/labels",
+    "_use_context": true,
+    "context_shape": [
+        256
+    ],
+    "input_shape": [
+        [
+            3785
+        ]
+    ],
+    "output_shape": [
+        1
+    ]
+}

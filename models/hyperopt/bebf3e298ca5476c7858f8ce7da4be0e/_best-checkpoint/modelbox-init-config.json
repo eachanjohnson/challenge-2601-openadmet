@@ -1,0 +1,19 @@
+{
+    "class_name": "bilinear-fp",
+    "context": [
+        "endpoint:hash"
+    ],
+    "dropout": 0.0,
+    "ensemble_size": 3,
+    "features": [
+        [
+            "clogp",
+            "transformer://models/llm/lchemme-1:clean_smiles"
+        ]
+    ],
+    "learning_rate": 1e-05,
+    "merge_method": "product",
+    "n_hidden": 1,
+    "n_units": 128,
+    "residual_depth": 2
+}

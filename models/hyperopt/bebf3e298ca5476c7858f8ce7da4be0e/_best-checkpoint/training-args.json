@@ -1,0 +1,5 @@
+{
+    "batch_size": 16,
+    "epochs": 1000,
+    "val_data": "data/train/validation/data.csv"
+}
