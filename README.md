@@ -170,7 +170,7 @@ Our best model had this configuration:
 
 Here is the training log:
 
-<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/training-log.png" width=450>
+<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/_best-checkpoint/training-log.png" width=450>
 
 And these are the evaluation scores.
 
@@ -185,7 +185,7 @@ Train (19847 rows):
 }
 ```
 
-<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/predictions_training.png" width=450>
+<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/_best-checkpoint/predictions_training.png" width=450>
 
 Validation (4252 rows):
 
@@ -198,7 +198,7 @@ Validation (4252 rows):
 }
 ```
 
-<img src="predictions_validation.png" width=450>
+<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/_best-checkpoint/predictions_validation.png" width=450>
 
 Test (4253 rows):
 
@@ -211,4 +211,4 @@ Test (4253 rows):
 }
 ```
 
-<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/predictions_test.png" width=450>
+<img src="models/hyperopt/bebf3e298ca5476c7858f8ce7da4be0e/_best-checkpoint/predictions_test.png" width=450>
