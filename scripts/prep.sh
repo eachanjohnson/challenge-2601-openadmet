@@ -42,10 +42,8 @@ set -euox pipefail
 INPUT=datasets.json
 VENV_NAME=venv
 
-# python -m venv "$VENV_NAME" \
-# && "$VENV_NAME"/bin/pip install --upgrade pip \
-# && "$VENV_NAME"/bin/pip install transformers tokenizers \
-# && "$VENV_NAME"/bin/pip install -r requirements.txt
+python -m venv "$VENV_NAME" \
+&& "$VENV_NAME"/bin/pip install -r requirements.txt
 
 source "$VENV_NAME"/bin/activate
 
